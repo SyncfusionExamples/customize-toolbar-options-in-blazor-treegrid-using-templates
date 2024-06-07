@@ -6,7 +6,7 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF1cXmhOYVVpR2Nbe055flVOal5QVAciSV9jS3pTcEVlWXZeeHZXQ2hdWQ==");
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
