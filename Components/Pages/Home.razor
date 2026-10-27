@@ -28,7 +28,7 @@
 </SfTreeGrid>
 
 @code{
-    SfTreeGrid<BusinessObject> TreeGrid;
+    SfTreeGrid<BusinessObject> TreeGrid = null!;
 
     public class BusinessObject
     {
@@ -51,9 +51,9 @@
     public List<BusinessObject> TreeData = new List<BusinessObject>();
     public List<DropDownData> PriorityData = new List<DropDownData>();
 
-    public void OnSelect(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownData> args)
+    public async Task OnSelect(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownData> args)
     {
-        this.TreeGrid.Search(args.Value);
+        await this.TreeGrid.SearchAsync(args.Value);
     }
 
     protected override void OnInitialized()
